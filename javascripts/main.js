@@ -10,10 +10,19 @@ const sharkAttackEvent = () => {
     graveyeard.buildGraveyard();
 };
 
+const reviveEvent = (e) => {
+    const personId = e.target.id;
+    personData.bringToLife(personId);
+    tanks.tankBuilder();
+    graveyeard.buildGraveyard();
+
+}
+
 const init = () => {
     tanks.tankBuilder();
     graveyeard.buildGraveyard();
     $('#biteMe').click(sharkAttackEvent);
+    $('body').on('click', '.revive-btn', reviveEvent);
 }
 
 init();

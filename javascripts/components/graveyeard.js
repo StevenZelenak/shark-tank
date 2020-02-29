@@ -7,8 +7,9 @@ const buildGraveyard = () => {
 
     deadPersons.forEach(deadppl => {
         domString += '<div class ="col-4 mb-4">'
-        domString += '<div class="card">'
-        domString += `<div class="card-body"><h5>${deadppl.name}</h5></div>`
+        domString += '<div class="card border border-dark">'
+        domString += `<div class="card-body text-center"><h5>${deadppl.name}</h5></div>`
+        domString += `<button id=${deadppl.id} class="btn btn-dark revive-btn">Revive</button>`
         domString += '</div>'
         domString += '</div>'
     });
