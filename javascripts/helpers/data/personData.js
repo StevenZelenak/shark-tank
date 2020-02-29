@@ -129,9 +129,9 @@ const person = [
 ]
 
 
-const getAlivePersons = () => {
 
-    return person.filter((x) => person.isDead === false);
+const getAlivePersons = () => {
+    return person.filter((x) => x.isDead === false);
 }
 
 

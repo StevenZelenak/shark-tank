@@ -1,7 +1,6 @@
 const printToDom = (divId, textToPrint) => {
-    //$('#tank') jquery
-    let selectedDiv = $(`#${divId}`);
-    selectedDiv.innerHTML = textToPrint;
+    //$('#tank')
+    $(`#${divId}`).html(textToPrint);
 }
 
 
